@@ -24,9 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-# Inherit some common Aosp stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
 # Inherit from RMX1941 device makefile
 $(call inherit-product, device/realme/RMX1941/device.mk)
 
@@ -45,18 +42,6 @@ PRODUCT_MODEL := Realme C2
 PRODUCT_MANUFACTURER := realme
 PRODUCT_RELEASE_NAME := Realme C2
 
-# Build FP
+# Build Info
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys"
-
-PRODUCT_BUILD_PROP_OVERRIDES := \
-    TARGET_DEVICE=RMX1941 \
-    PRODUCT_DEVICE=RMX1941 \
-    PRIVATE_BUILD_DESC="full_oppo6762-user 10 QP1A.190711.020 bedd37e98646d3a1 release-keys"
-
-PRODUCT_GMS_CLIENTID_BASE := android-realme
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
-# FaceLock
-TARGET_FACE_UNLOCK_SUPPORTED := true
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
