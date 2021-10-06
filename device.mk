@@ -32,8 +32,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -51,6 +50,11 @@ PRODUCT_PACKAGES += \
     fstab.mt6765 \
     perf_profile.sh \
     set_zram.sh
+
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    messaging
 
 # HIDL
 PRODUCT_PACKAGES += \
