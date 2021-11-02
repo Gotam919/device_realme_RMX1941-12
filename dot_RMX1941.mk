@@ -26,6 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base_system.mk)
 # Inherit from RMX1941 device makefile
 $(call inherit-product, device/realme/RMX1941/device.mk)
 
+# Inherit some common DotOS stuff
+$(call inherit-product, vendor/dot/config/common.mk)
+
 # Dimensions
 TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
@@ -35,7 +38,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1941
-PRODUCT_NAME := aosp_RMX1941
+PRODUCT_NAME := dot_RMX1941
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C2
 PRODUCT_MANUFACTURER := realme
