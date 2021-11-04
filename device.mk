@@ -23,9 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Parts
-PRODUCT_PACKAGES += \
-    RealmeParts \
-    RealmeDirac
+#PRODUCT_PACKAGES += \
+#    RealmeParts \
+#    RealmeDirac
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
