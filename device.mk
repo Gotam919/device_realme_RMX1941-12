@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# IMS
+$(call inherit-product, vendor/mediatek-ims/ims-vendor.mk)
+
 # Parts
 PRODUCT_PACKAGES += \
     RealmeParts \
