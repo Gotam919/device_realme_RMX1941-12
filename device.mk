@@ -26,9 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, vendor/mediatek-ims/ims-vendor.mk)
 
 # Parts
-PRODUCT_PACKAGES += \
-    RealmeParts \
-    RealmeDirac
+#PRODUCT_PACKAGES += \
+#    RealmeParts \
+#    RealmeDirac
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
